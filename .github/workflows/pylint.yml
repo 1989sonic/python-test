@@ -1,7 +1,7 @@
 name: Test and Lint
 on: [push, pull_request]
 jobs:
-  build:
+  test and lint:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
@@ -10,6 +10,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pylint
-      - name: Analysing the code with pylint
-        run: |
-          pylint .
+      - name: Test
+        uses: python -m pytest
+      - name: Lint
+        run: pylint .
