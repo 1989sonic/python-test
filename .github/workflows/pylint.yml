@@ -12,6 +12,6 @@ jobs:
           pip install pytest
           pip install pylint
       - name: Test
-        uses: pytest .
+        run: pytest .
       - name: Lint
         run: pylint .
