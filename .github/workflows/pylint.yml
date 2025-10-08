@@ -11,6 +11,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install pylint
       - name: Test
-        uses: python -m pytest
+        uses: python -m pytest .
       - name: Lint
         run: pylint .
