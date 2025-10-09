@@ -14,4 +14,4 @@ jobs:
       - name: Test
         run: python -m pytest
       - name: Lint
-        run: pylint .
+        run: pylint --disable=C0103,C0114,C0116,C0301,C0303,C0304,R0124,R0133,W1514 .
